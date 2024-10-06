@@ -23,7 +23,7 @@ jobs:
         run: |
           sshpass -p ${{ secrets.SSH_PASSWORD }} ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.DROPLET_IP }} << EOF
             cd /var/helloworld/
-            git pull
+            git pull RubberD/argh main
             npm install
             npm run
             pm2 restart app
